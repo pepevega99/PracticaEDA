@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>03_Encoding_categorical_vars</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>03_encoding_categorical_vars</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7475,7 +7475,18 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=70019417">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e67cc091">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Codificaci%C3%B3n-de-las-variables-categoricas,-escalado-y-modelo">Codificación de las variables categoricas, escalado y modelo<a class="anchor-link" href="#Codificaci%C3%B3n-de-las-variables-categoricas,-escalado-y-modelo">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6249bd76">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7598,123 +7609,123 @@ a.anchor-link {
 <tbody>
 <tr>
 <th>0</th>
-<td>130045</td>
+<td>104793</td>
 <td>0.1</td>
 <td>0</td>
 <td>1</td>
-<td>1</td>
-<td>linux</td>
-<td>2.961459</td>
+<td>0</td>
+<td>windows</td>
+<td>2.126967</td>
 <td>INTERNET</td>
 <td>0</td>
-<td>1000.0</td>
+<td>500.0</td>
 <td>...</td>
-<td>828</td>
+<td>1485</td>
 <td>AB</td>
-<td>-0.818708</td>
-<td>0.039156</td>
-<td>50</td>
-<td>107</td>
-<td>-1</td>
-<td>0.073344</td>
+<td>-0.925736</td>
+<td>0.021851</td>
+<td>40</td>
+<td>2</td>
+<td>8</td>
+<td>0.898839</td>
 <td>3</td>
 <td>0</td>
 </tr>
 <tr>
 <th>1</th>
-<td>166569</td>
-<td>0.6</td>
+<td>131379</td>
+<td>0.1</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
+<td>1</td>
+<td>1</td>
 <td>linux</td>
-<td>3.583831</td>
+<td>14.136746</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>200.0</td>
 <td>...</td>
-<td>559</td>
-<td>AD</td>
-<td>-0.937440</td>
-<td>0.002648</td>
-<td>20</td>
-<td>5</td>
-<td>131</td>
-<td>0.333404</td>
+<td>1092</td>
+<td>AC</td>
+<td>-1.412097</td>
+<td>0.001366</td>
+<td>30</td>
+<td>8</td>
+<td>88</td>
+<td>0.547038</td>
 <td>3</td>
 <td>0</td>
 </tr>
 <tr>
 <th>2</th>
-<td>172006</td>
-<td>0.7</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>other</td>
-<td>5.655190</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>500.0</td>
-<td>...</td>
-<td>1342</td>
-<td>AA</td>
-<td>15.592420</td>
-<td>1.154547</td>
-<td>40</td>
-<td>7</td>
-<td>32</td>
-<td>0.784978</td>
-<td>3</td>
-<td>0</td>
-</tr>
-<tr>
-<th>3</th>
-<td>870372</td>
-<td>0.8</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>other</td>
-<td>8.137739</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>1500.0</td>
-<td>...</td>
-<td>802</td>
-<td>AA</td>
-<td>38.183317</td>
-<td>0.032491</td>
-<td>30</td>
-<td>41</td>
-<td>-1</td>
-<td>0.691432</td>
-<td>5</td>
-<td>0</td>
-</tr>
-<tr>
-<th>4</th>
-<td>97203</td>
-<td>0.3</td>
+<td>440665</td>
+<td>0.5</td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
 <td>linux</td>
-<td>1.457494</td>
+<td>8.533374</td>
 <td>INTERNET</td>
 <td>0</td>
-<td>1500.0</td>
+<td>200.0</td>
 <td>...</td>
-<td>1100</td>
+<td>979</td>
 <td>AB</td>
-<td>-1.454656</td>
-<td>0.031758</td>
-<td>50</td>
-<td>215</td>
+<td>-1.220475</td>
+<td>0.004143</td>
+<td>30</td>
+<td>17</td>
 <td>-1</td>
-<td>0.139493</td>
-<td>3</td>
+<td>0.104121</td>
 <td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>217656</td>
+<td>0.8</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>linux</td>
+<td>4.582946</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>990.0</td>
+<td>...</td>
+<td>1667</td>
+<td>AC</td>
+<td>-0.251319</td>
+<td>0.000040</td>
+<td>20</td>
+<td>24</td>
+<td>-1</td>
+<td>0.554209</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>401950</td>
+<td>0.2</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>macintosh</td>
+<td>3.942180</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>...</td>
+<td>3889</td>
+<td>AB</td>
+<td>-0.455009</td>
+<td>0.006409</td>
+<td>10</td>
+<td>17</td>
+<td>32</td>
+<td>0.681949</td>
+<td>1</td>
+<td>0</td>
 </tr>
 <tr>
 <th>...</th>
@@ -7742,122 +7753,122 @@ a.anchor-link {
 </tr>
 <tr>
 <th>799995</th>
-<td>274625</td>
-<td>0.7</td>
+<td>859711</td>
+<td>0.8</td>
 <td>0</td>
+<td>2</td>
 <td>1</td>
-<td>1</td>
-<td>windows</td>
-<td>6.060305</td>
+<td>other</td>
+<td>1.730376</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>200.0</td>
 <td>...</td>
-<td>2348</td>
+<td>821</td>
 <td>AB</td>
-<td>-0.861634</td>
-<td>0.007741</td>
-<td>30</td>
-<td>75</td>
+<td>-1.116012</td>
+<td>0.025359</td>
+<td>20</td>
+<td>46</td>
 <td>-1</td>
-<td>0.121014</td>
-<td>2</td>
+<td>0.276809</td>
+<td>5</td>
 <td>0</td>
 </tr>
 <tr>
 <th>799996</th>
-<td>507444</td>
-<td>0.9</td>
+<td>897142</td>
+<td>0.1</td>
 <td>0</td>
 <td>1</td>
-<td>1</td>
-<td>windows</td>
-<td>3.294422</td>
+<td>0</td>
+<td>linux</td>
+<td>8.594472</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>200.0</td>
 <td>...</td>
-<td>2499</td>
-<td>AA</td>
-<td>20.850645</td>
-<td>0.004357</td>
+<td>1178</td>
+<td>AB</td>
+<td>-0.450084</td>
+<td>0.024832</td>
 <td>40</td>
-<td>154</td>
+<td>29</td>
 <td>-1</td>
-<td>0.286454</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<th>799997</th>
-<td>962224</td>
-<td>0.8</td>
-<td>0</td>
-<td>2</td>
-<td>0</td>
-<td>other</td>
-<td>22.469080</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>...</td>
-<td>785</td>
-<td>AC</td>
-<td>-0.754281</td>
-<td>30.737924</td>
-<td>50</td>
-<td>38</td>
-<td>-1</td>
-<td>0.817974</td>
+<td>0.403988</td>
 <td>4</td>
 <td>0</td>
 </tr>
 <tr>
-<th>799998</th>
-<td>692751</td>
-<td>0.5</td>
+<th>799997</th>
+<td>35326</td>
+<td>0.8</td>
 <td>0</td>
 <td>1</td>
-<td>1</td>
+<td>0</td>
 <td>other</td>
-<td>1.438836</td>
+<td>0.922873</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>200.0</td>
 <td>...</td>
-<td>604</td>
+<td>958</td>
 <td>AD</td>
-<td>-0.378473</td>
-<td>0.014072</td>
-<td>20</td>
-<td>3</td>
-<td>32</td>
-<td>0.721404</td>
-<td>0</td>
+<td>-0.735873</td>
+<td>0.007345</td>
+<td>30</td>
+<td>30</td>
+<td>-1</td>
+<td>0.562414</td>
+<td>7</td>
 <td>0</td>
 </tr>
 <tr>
-<th>799999</th>
-<td>52333</td>
-<td>0.6</td>
+<th>799998</th>
+<td>845054</td>
+<td>0.3</td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
 <td>other</td>
-<td>11.341331</td>
+<td>2.521377</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>...</td>
+<td>340</td>
+<td>AD</td>
+<td>49.302081</td>
+<td>0.003609</td>
+<td>30</td>
+<td>8</td>
+<td>29</td>
+<td>0.499213</td>
+<td>5</td>
+<td>0</td>
+</tr>
+<tr>
+<th>799999</th>
+<td>756700</td>
+<td>0.5</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>windows</td>
+<td>3.132428</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>1000.0</td>
 <td>...</td>
-<td>798</td>
+<td>1159</td>
 <td>AC</td>
-<td>-0.455035</td>
-<td>0.008287</td>
-<td>10</td>
-<td>11</td>
-<td>53</td>
-<td>0.898874</td>
-<td>7</td>
+<td>-1.234623</td>
+<td>0.024122</td>
+<td>30</td>
+<td>119</td>
+<td>-1</td>
+<td>0.394720</td>
+<td>5</td>
 <td>0</td>
 </tr>
 </tbody>
@@ -7947,122 +7958,122 @@ a.anchor-link {
 <tbody>
 <tr>
 <th>0</th>
-<td>62169</td>
+<td>267199</td>
+<td>0.1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>linux</td>
+<td>5.023156</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>...</td>
+<td>2555</td>
+<td>AB</td>
+<td>-0.507390</td>
+<td>0.029926</td>
+<td>20</td>
+<td>8</td>
+<td>12</td>
+<td>0.306713</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>863338</td>
+<td>0.6</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>linux</td>
+<td>1.675085</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>...</td>
+<td>2624</td>
+<td>AC</td>
+<td>-1.218131</td>
+<td>0.002462</td>
+<td>30</td>
+<td>42</td>
+<td>-1</td>
+<td>0.456211</td>
+<td>5</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>445129</td>
+<td>0.9</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>linux</td>
+<td>1.338952</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>...</td>
+<td>885</td>
+<td>AB</td>
+<td>-1.536734</td>
+<td>0.029170</td>
+<td>50</td>
+<td>7</td>
+<td>65</td>
+<td>0.015233</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>949635</td>
+<td>0.2</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>windows</td>
+<td>8.170057</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>...</td>
+<td>1700</td>
+<td>AC</td>
+<td>-1.727492</td>
+<td>0.013426</td>
+<td>50</td>
+<td>93</td>
+<td>-1</td>
+<td>0.932129</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>271851</td>
 <td>0.7</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
 <td>windows</td>
-<td>1.911341</td>
+<td>17.164353</td>
 <td>INTERNET</td>
 <td>0</td>
-<td>200.0</td>
+<td>500.0</td>
 <td>...</td>
-<td>1576</td>
+<td>2771</td>
 <td>AB</td>
-<td>-1.385302</td>
-<td>0.030827</td>
-<td>50</td>
-<td>201</td>
-<td>-1</td>
-<td>0.880898</td>
-<td>7</td>
-<td>0</td>
-</tr>
-<tr>
-<th>1</th>
-<td>507216</td>
-<td>0.9</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>windows</td>
-<td>4.590920</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>...</td>
-<td>899</td>
-<td>AA</td>
-<td>15.259344</td>
-<td>9.405871</td>
-<td>30</td>
-<td>185</td>
-<td>-1</td>
-<td>0.474379</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<th>2</th>
-<td>40656</td>
-<td>0.4</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>linux</td>
-<td>4.716731</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>...</td>
-<td>964</td>
-<td>AC</td>
-<td>-0.656907</td>
-<td>0.001075</td>
+<td>-0.480861</td>
+<td>0.004021</td>
 <td>20</td>
-<td>57</td>
+<td>28</td>
 <td>-1</td>
-<td>0.340793</td>
-<td>7</td>
-<td>0</td>
-</tr>
-<tr>
-<th>3</th>
-<td>511846</td>
-<td>0.6</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>linux</td>
-<td>4.357648</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>...</td>
-<td>1763</td>
-<td>AC</td>
-<td>-0.429629</td>
-<td>0.010845</td>
-<td>20</td>
-<td>332</td>
-<td>-1</td>
-<td>0.287576</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<th>4</th>
-<td>391424</td>
-<td>0.1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>windows</td>
-<td>2.823202</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>...</td>
-<td>1622</td>
-<td>AD</td>
-<td>-0.642513</td>
-<td>0.013899</td>
-<td>20</td>
-<td>334</td>
-<td>-1</td>
-<td>0.273898</td>
-<td>1</td>
+<td>0.253185</td>
+<td>2</td>
 <td>0</td>
 </tr>
 <tr>
@@ -8091,122 +8102,122 @@ a.anchor-link {
 </tr>
 <tr>
 <th>199995</th>
-<td>49568</td>
-<td>0.1</td>
+<td>169659</td>
+<td>0.4</td>
 <td>0</td>
 <td>1</td>
-<td>1</td>
-<td>other</td>
-<td>2.369511</td>
+<td>0</td>
+<td>windows</td>
+<td>1.441572</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>200.0</td>
 <td>...</td>
-<td>685</td>
-<td>AB</td>
-<td>-1.368315</td>
-<td>0.011195</td>
-<td>40</td>
-<td>64</td>
+<td>1442</td>
+<td>AA</td>
+<td>26.207088</td>
+<td>33.920958</td>
+<td>20</td>
+<td>121</td>
 <td>-1</td>
-<td>0.603768</td>
-<td>7</td>
+<td>0.441344</td>
+<td>3</td>
 <td>0</td>
 </tr>
 <tr>
 <th>199996</th>
-<td>805423</td>
-<td>0.9</td>
+<td>199272</td>
+<td>0.7</td>
 <td>0</td>
 <td>1</td>
-<td>0</td>
+<td>1</td>
 <td>other</td>
-<td>16.786334</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>...</td>
-<td>1738</td>
-<td>AA</td>
-<td>103.475906</td>
-<td>15.211588</td>
-<td>20</td>
-<td>125</td>
-<td>-1</td>
-<td>0.330340</td>
-<td>5</td>
-<td>0</td>
-</tr>
-<tr>
-<th>199997</th>
-<td>960138</td>
-<td>0.1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>windows</td>
-<td>2.411332</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>...</td>
-<td>783</td>
-<td>AB</td>
-<td>-0.612563</td>
-<td>0.010094</td>
-<td>20</td>
-<td>255</td>
-<td>-1</td>
-<td>0.797170</td>
-<td>4</td>
-<td>0</td>
-</tr>
-<tr>
-<th>199998</th>
-<td>96938</td>
-<td>0.1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>linux</td>
-<td>6.252607</td>
+<td>2.911984</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>1500.0</td>
 <td>...</td>
-<td>2329</td>
-<td>AC</td>
-<td>-0.807537</td>
-<td>0.005404</td>
-<td>20</td>
-<td>83</td>
+<td>4041</td>
+<td>AA</td>
+<td>34.329905</td>
+<td>0.037431</td>
+<td>30</td>
+<td>145</td>
 <td>-1</td>
-<td>0.151976</td>
+<td>0.159174</td>
 <td>3</td>
-<td>1</td>
+<td>0</td>
 </tr>
 <tr>
-<th>199999</th>
-<td>105088</td>
-<td>0.9</td>
+<th>199997</th>
+<td>71026</td>
+<td>0.4</td>
 <td>0</td>
 <td>1</td>
-<td>0</td>
-<td>windows</td>
-<td>8.800470</td>
+<td>1</td>
+<td>linux</td>
+<td>13.706277</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>200.0</td>
 <td>...</td>
-<td>695</td>
-<td>AD</td>
-<td>-0.488341</td>
-<td>0.010340</td>
-<td>50</td>
-<td>28</td>
+<td>633</td>
+<td>AB</td>
+<td>-1.108422</td>
+<td>0.000180</td>
+<td>20</td>
+<td>1</td>
+<td>311</td>
+<td>0.544298</td>
+<td>7</td>
+<td>0</td>
+</tr>
+<tr>
+<th>199998</th>
+<td>589697</td>
+<td>0.7</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>windows</td>
+<td>4.950243</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>1500.0</td>
+<td>...</td>
+<td>902</td>
+<td>AB</td>
+<td>-1.568353</td>
+<td>0.018825</td>
+<td>40</td>
+<td>34</td>
 <td>-1</td>
-<td>0.008358</td>
-<td>3</td>
+<td>0.297059</td>
+<td>6</td>
+<td>0</td>
+</tr>
+<tr>
+<th>199999</th>
+<td>994405</td>
+<td>0.9</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>linux</td>
+<td>14.600301</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>1500.0</td>
+<td>...</td>
+<td>863</td>
+<td>AB</td>
+<td>-0.869951</td>
+<td>0.013570</td>
+<td>30</td>
+<td>40</td>
+<td>-1</td>
+<td>0.486751</td>
+<td>4</td>
 <td>0</td>
 </tr>
 </tbody>
@@ -8295,7 +8306,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Asignamos en pd_fraud_train y a pd_fraud_test las variables categóricas en función del enunciado. Tambien ponemos la
+<p>Asignamos en pd_fraud_train y a pd_fraud_test las variables categóricas en función del enunciado. Tambien ponemos la 
 variable objetivo en String.</p>
 </div>
 </div>
@@ -8460,122 +8471,122 @@ variable objetivo en String.</p>
 <tbody>
 <tr>
 <th>0</th>
+<td>0.1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>linux</td>
+<td>5.023156</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>0</td>
+<td>...</td>
+<td>2555</td>
+<td>AB</td>
+<td>-0.507390</td>
+<td>0.029926</td>
+<td>20</td>
+<td>8</td>
+<td>12</td>
+<td>0.306713</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>0.6</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>linux</td>
+<td>1.675085</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>1</td>
+<td>...</td>
+<td>2624</td>
+<td>AC</td>
+<td>-1.218131</td>
+<td>0.002462</td>
+<td>30</td>
+<td>42</td>
+<td>-1</td>
+<td>0.456211</td>
+<td>5</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>0.9</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>linux</td>
+<td>1.338952</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>0</td>
+<td>...</td>
+<td>885</td>
+<td>AB</td>
+<td>-1.536734</td>
+<td>0.029170</td>
+<td>50</td>
+<td>7</td>
+<td>65</td>
+<td>0.015233</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>0.2</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>windows</td>
+<td>8.170057</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>0</td>
+<td>...</td>
+<td>1700</td>
+<td>AC</td>
+<td>-1.727492</td>
+<td>0.013426</td>
+<td>50</td>
+<td>93</td>
+<td>-1</td>
+<td>0.932129</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<th>4</th>
 <td>0.7</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
 <td>windows</td>
-<td>1.911341</td>
+<td>17.164353</td>
 <td>INTERNET</td>
 <td>0</td>
-<td>200.0</td>
-<td>1</td>
+<td>500.0</td>
+<td>0</td>
 <td>...</td>
-<td>1576</td>
+<td>2771</td>
 <td>AB</td>
-<td>-1.385302</td>
-<td>0.030827</td>
-<td>50</td>
-<td>201</td>
-<td>-1</td>
-<td>0.880898</td>
-<td>7</td>
-<td>0</td>
-</tr>
-<tr>
-<th>1</th>
-<td>0.9</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>windows</td>
-<td>4.590920</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>1</td>
-<td>...</td>
-<td>899</td>
-<td>AA</td>
-<td>15.259344</td>
-<td>9.405871</td>
-<td>30</td>
-<td>185</td>
-<td>-1</td>
-<td>0.474379</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<th>2</th>
-<td>0.4</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>linux</td>
-<td>4.716731</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>0</td>
-<td>...</td>
-<td>964</td>
-<td>AC</td>
-<td>-0.656907</td>
-<td>0.001075</td>
+<td>-0.480861</td>
+<td>0.004021</td>
 <td>20</td>
-<td>57</td>
+<td>28</td>
 <td>-1</td>
-<td>0.340793</td>
-<td>7</td>
-<td>0</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.6</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>linux</td>
-<td>4.357648</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>1</td>
-<td>...</td>
-<td>1763</td>
-<td>AC</td>
-<td>-0.429629</td>
-<td>0.010845</td>
-<td>20</td>
-<td>332</td>
-<td>-1</td>
-<td>0.287576</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<th>4</th>
-<td>0.1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>windows</td>
-<td>2.823202</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>0</td>
-<td>...</td>
-<td>1622</td>
-<td>AD</td>
-<td>-0.642513</td>
-<td>0.013899</td>
-<td>20</td>
-<td>334</td>
-<td>-1</td>
-<td>0.273898</td>
-<td>1</td>
+<td>0.253185</td>
+<td>2</td>
 <td>0</td>
 </tr>
 <tr>
@@ -8604,99 +8615,99 @@ variable objetivo en String.</p>
 </tr>
 <tr>
 <th>199995</th>
-<td>0.1</td>
+<td>0.4</td>
 <td>0</td>
 <td>1</td>
-<td>1</td>
-<td>other</td>
-<td>2.369511</td>
+<td>0</td>
+<td>windows</td>
+<td>1.441572</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>200.0</td>
-<td>0</td>
+<td>1</td>
 <td>...</td>
-<td>685</td>
-<td>AB</td>
-<td>-1.368315</td>
-<td>0.011195</td>
-<td>40</td>
-<td>64</td>
+<td>1442</td>
+<td>AA</td>
+<td>26.207088</td>
+<td>33.920958</td>
+<td>20</td>
+<td>121</td>
 <td>-1</td>
-<td>0.603768</td>
-<td>7</td>
+<td>0.441344</td>
+<td>3</td>
 <td>0</td>
 </tr>
 <tr>
 <th>199996</th>
-<td>0.9</td>
+<td>0.7</td>
 <td>0</td>
 <td>1</td>
-<td>0</td>
+<td>1</td>
 <td>other</td>
-<td>16.786334</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>0</td>
-<td>...</td>
-<td>1738</td>
-<td>AA</td>
-<td>103.475906</td>
-<td>15.211588</td>
-<td>20</td>
-<td>125</td>
-<td>-1</td>
-<td>0.330340</td>
-<td>5</td>
-<td>0</td>
-</tr>
-<tr>
-<th>199997</th>
-<td>0.1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>windows</td>
-<td>2.411332</td>
-<td>INTERNET</td>
-<td>0</td>
-<td>200.0</td>
-<td>0</td>
-<td>...</td>
-<td>783</td>
-<td>AB</td>
-<td>-0.612563</td>
-<td>0.010094</td>
-<td>20</td>
-<td>255</td>
-<td>-1</td>
-<td>0.797170</td>
-<td>4</td>
-<td>0</td>
-</tr>
-<tr>
-<th>199998</th>
-<td>0.1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>linux</td>
-<td>6.252607</td>
+<td>2.911984</td>
 <td>INTERNET</td>
 <td>0</td>
 <td>1500.0</td>
 <td>0</td>
 <td>...</td>
-<td>2329</td>
-<td>AC</td>
-<td>-0.807537</td>
-<td>0.005404</td>
-<td>20</td>
-<td>83</td>
+<td>4041</td>
+<td>AA</td>
+<td>34.329905</td>
+<td>0.037431</td>
+<td>30</td>
+<td>145</td>
 <td>-1</td>
-<td>0.151976</td>
+<td>0.159174</td>
 <td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<th>199997</th>
+<td>0.4</td>
+<td>0</td>
 <td>1</td>
+<td>1</td>
+<td>linux</td>
+<td>13.706277</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>200.0</td>
+<td>0</td>
+<td>...</td>
+<td>633</td>
+<td>AB</td>
+<td>-1.108422</td>
+<td>0.000180</td>
+<td>20</td>
+<td>1</td>
+<td>311</td>
+<td>0.544298</td>
+<td>7</td>
+<td>0</td>
+</tr>
+<tr>
+<th>199998</th>
+<td>0.7</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>windows</td>
+<td>4.950243</td>
+<td>INTERNET</td>
+<td>0</td>
+<td>1500.0</td>
+<td>0</td>
+<td>...</td>
+<td>902</td>
+<td>AB</td>
+<td>-1.568353</td>
+<td>0.018825</td>
+<td>40</td>
+<td>34</td>
+<td>-1</td>
+<td>0.297059</td>
+<td>6</td>
+<td>0</td>
 </tr>
 <tr>
 <th>199999</th>
@@ -8704,22 +8715,22 @@ variable objetivo en String.</p>
 <td>0</td>
 <td>1</td>
 <td>0</td>
-<td>windows</td>
-<td>8.800470</td>
+<td>linux</td>
+<td>14.600301</td>
 <td>INTERNET</td>
 <td>0</td>
-<td>200.0</td>
+<td>1500.0</td>
 <td>0</td>
 <td>...</td>
-<td>695</td>
-<td>AD</td>
-<td>-0.488341</td>
-<td>0.010340</td>
-<td>50</td>
-<td>28</td>
+<td>863</td>
+<td>AB</td>
+<td>-0.869951</td>
+<td>0.013570</td>
+<td>30</td>
+<td>40</td>
 <td>-1</td>
-<td>0.008358</td>
-<td>3</td>
+<td>0.486751</td>
+<td>4</td>
 <td>0</td>
 </tr>
 </tbody>
@@ -8806,7 +8817,7 @@ dtype: object</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Hacemos un recuento de cuantas operaciones en el total del dataset han sido fraudulentas y cuantas no. Lo hacemos tanto con
+<p>Hacemos un recuento de cuantas operaciones en el total del dataset han sido fraudulentas y cuantas no. Lo hacemos tanto con 
 los valores 0 y 1 como con los valores Fraude y No fraude para que sea más legible.</p>
 </div>
 </div>
@@ -8956,8 +8967,8 @@ Name: count, dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Dividimos nuevamente pd_fraud train y pd_fraud test en conjuntos de entrenamiento y prueba. Utilizaremos X_train e y_train para
-entrenar el modelo mientras que evaluaremos la capacidad del mismo con X_test e y_test. La razón de esta división es para
+<p>Dividimos nuevamente pd_fraud train y pd_fraud test en conjuntos de entrenamiento y prueba. Utilizaremos X_train e y_train para 
+entrenar el modelo mientras que evaluaremos la capacidad del mismo con X_test e y_test. La razón de esta división es para 
 evitar el overfitting. Al mantener un conjunto de prueba separado que el modelo no ve durante el entrenamiento,
 podemos tener una mejor evaluación de su rendimiento en la práctica.</p>
 </div>
@@ -9173,7 +9184,7 @@ todas aquellas columnas que no esten en la primera lista.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Creamos un objeto OneHotEncoder de la biblioteca category_encoders.Solo aplicamos la transformacion a las columnas categóricas.
-Con esto lo que hacemos es convertir las distintas categorias de una columna en columnas. Cada columna tendrá un '1' si la categoría original era esa y '0'
+Con esto lo que hacemos es convertir las distintas categorias de una columna en columnas. Cada columna tendrá un '1' si la categoría original era esa y '0' 
 de lo contrario.</p>
 <p>Hemos elegido OneHotEnconder ya que nuestras variables categóricas no tienen
 excesivas categorías.</p>
@@ -9187,102 +9198,22 @@ excesivas categorías.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Posterimente entrenamos con los datos X_train e y_train.Ahora model
+<p>Posterimente entrenamos con los datos X_train e y_train.Ahora model 
 contiene el aprendzaje conseguido a través de los datos de entrenamiento.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=591e7a8c">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=591e7a8c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ohe</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="n">list_columns_cat</span><span class="p">)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">ohe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:28: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  elif pd.api.types.is_categorical_dtype(cols):
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-</pre>
 </div>
 </div>
 </div>
@@ -9331,7 +9262,7 @@ entrenamiento (X_train e y_trian) como el conjunto de prueba (X_test e y_test).<
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5ecb970d">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5ecb970d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9348,62 +9279,6 @@ entrenamiento (X_train e y_trian) como el conjunto de prueba (X_test e y_test).<
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\utils.py:50: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  return pd.api.types.is_categorical_dtype(dtype)
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2ebf7315">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -9411,7 +9286,7 @@ C:\Users\Pepe\anaconda3\envs\PracticaEDA\lib\site-packages\category_encoders\uti
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Ahora tenemos conjuntos de datos de entrenamiento y prueba (X_train_t y X_test_t) que están listos para ser utilizados en
+<p>Ahora tenemos conjuntos de datos de entrenamiento y prueba (X_train_t y X_test_t) que están listos para ser utilizados en 
 un modelo de aprendizaje automático, con todas las variables categóricas codificadas adecuadamente.</p>
 </div>
 </div>
@@ -9423,7 +9298,7 @@ un modelo de aprendizaje automático, con todas las variables categóricas codif
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Es muy importante que en ambos conjuntos se utilice la misma transformación ya que esto nos permite mantener
+<p>Es muy importante que en ambos conjuntos se utilice la misma transformación ya que esto nos permite mantener 
 la consistencia de los datos al entrenar y evaluar el modelo.</p>
 </div>
 </div>
@@ -9549,6 +9424,17 @@ la consistencia de los datos al entrenar y evaluar el modelo.</p>
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3fafa545">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Conclusi%C3%B3n">Conclusión<a class="anchor-link" href="#Conclusi%C3%B3n">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=646454e4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9556,8 +9442,8 @@ la consistencia de los datos al entrenar y evaluar el modelo.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Para concluir, con este preprocesamiento hemos establecido en que partes del dataset debemos poner el foco.
-Asignamos a cada variable su tipo de dato, identificamos cuales de ellas son las que tienen una mayor relación con el fraude(a través de gráficos, correlaciones, cramer´s_v...) y hemos identificado los valores nulos y
-outliers para su posterior tratamiento. Además también hemos separado los datos en train
+Asignamos a cada variable su tipo de dato, identificamos cuales de ellas son las que tienen una mayor relación con el fraude(a través de gráficos, correlaciones, cramer´s_v...) y hemos identificado los valores nulos y 
+outliers para su posterior tratamiento. Además también hemos separado los datos en train 
 y test y codificado las variables categóricas.</p>
 <p>Ahora nuestros datos están listos para ser utilizados en un modelo de aprendizaje automático, con todas las variables
 categóricas codificadas adecuadamente.</p>
